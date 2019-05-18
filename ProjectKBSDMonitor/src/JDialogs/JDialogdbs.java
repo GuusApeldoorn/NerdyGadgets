@@ -1,14 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package JDialogs;
 
-/**
- *
- * @author Marc
- */
-public class JDialogdbs {
-    
+import javax.swing.*;
+
+public class JDialogdbs extends JDialog {
+    private JPanel contentPane;
+    private JTabbedPane tabbedPane1;
+    private JProgressBar progressBar1;
+    private JProgressBar progressBar2;
+
+
+    public JDialogdbs() {
+        setTitle("Monitor dialog");
+        setContentPane(contentPane);
+        setModal(true);
+    }
 }

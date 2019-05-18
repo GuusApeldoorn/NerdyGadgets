@@ -28,6 +28,8 @@ public class ProjectKBSDMonitor {
         m1.addComponentWebserver(w3);
         m1.addComponentWebserver(w4);
         Monitoring m01 = new Monitoring(m1);
+
+
     }
     
 }
