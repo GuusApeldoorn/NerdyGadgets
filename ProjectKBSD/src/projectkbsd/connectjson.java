@@ -19,18 +19,18 @@ public class connectjson {
 
     private static HttpURLConnection connection;
 
-    public static String parse(String responseBody) {
-        System.out.println();
-        JSONArray mData = new JSONArray(responseBody);
+    public static String parse(String jsonString) {
 
-        for (int i = 0; i < mData.length(); i++){
-            JSONObject server = mData.getJSONObject(i);
-            float uptime = server.getFloat("uptime");
-            String name = server.getString("name");
-            int timestamp = server.getInt("timestamp");
-            int diskFree = server.getInt("disk_free");
-            int diskUsed = server.getInt("disk_used");
-            double cpu = server.getDouble("cpu");
+        JSONArray server = new JSONArray(jsonString);
+
+        for (int i = 1; i < server.length(); i++){
+            JSONObject mData = server.getJSONObject(i);
+            float uptime = mData.getFloat("uptime");
+            String name = mData.getString("name");
+            int timestamp = mData.getInt("timestamp");
+            int diskFree = mData.getInt("disk_free");
+            int diskUsed = mData.getInt("disk_used");
+            double cpu = mData.getDouble("cpu");
 
             System.out.println("uptime:" + uptime + " nameserver:" + name + " timestamp:" + timestamp + " Diskfree:" + diskFree + " diskused:" + diskUsed + " CPU:" + cpu );
 
@@ -82,11 +82,18 @@ public class connectjson {
                 reader.close();
 
 
+
             }
 
             //System.out.println(responseContent);
+
+            //maakt van de stringbuffer(responseContent) een string
             String responseContent1 = new String(responseContent);
+
             parse(responseContent1);
+
+
+
 
 
         } catch (MalformedURLException e) {
