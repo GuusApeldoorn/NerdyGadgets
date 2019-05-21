@@ -202,6 +202,7 @@ public class Monitoring extends JFrame implements ActionListener {
 
                 JDialogws dialog = new JDialogws();
                 dialog.pack();
+                dialog.setLocationRelativeTo(null);
                 dialog.setVisible(true);
 
             }
@@ -213,6 +214,7 @@ public class Monitoring extends JFrame implements ActionListener {
 
                 JDialogdbs dialog = new JDialogdbs();
                 dialog.pack();
+                dialog.setLocationRelativeTo(null);
                 dialog.setVisible(true);
 
             }
@@ -224,6 +226,7 @@ public class Monitoring extends JFrame implements ActionListener {
 
                 JDialogfw dialog = new JDialogfw();
                 dialog.pack();
+                dialog.setLocationRelativeTo(null);
                 dialog.setVisible(true);
 
             }
@@ -235,6 +238,7 @@ public class Monitoring extends JFrame implements ActionListener {
 
                 JDialogdbl dialog = new JDialogdbl();
                 dialog.pack();
+                dialog.setLocationRelativeTo(null);
                 dialog.setVisible(true);
 
             }

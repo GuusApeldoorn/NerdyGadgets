@@ -11,6 +11,9 @@ package projectkbsdmonitor;
  */
 public class ProjectKBSDMonitor {
 
+
+
+
     /**
      * @param args the command line arguments
      */
@@ -28,6 +31,8 @@ public class ProjectKBSDMonitor {
         m1.addComponentWebserver(w3);
         m1.addComponentWebserver(w4);
         Monitoring m01 = new Monitoring(m1);
+
+
 
 
     }
