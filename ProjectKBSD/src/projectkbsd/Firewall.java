@@ -10,8 +10,21 @@ package projectkbsd;
  * @author Marc
  */
 public class Firewall extends Component {
-    
-    public Firewall(double availability, int price ) {
+
+    private double availability;
+    private int price;
+
+    public Firewall(double availability, int price) {
         super("Firewall", availability, price);
+        this.availability = availability;
+        this.price = price;
+    }
+
+    public double getAvailability() {
+        return this.availability;
+    }
+
+    public int getPrice() {
+        return this.price;
     }
 }

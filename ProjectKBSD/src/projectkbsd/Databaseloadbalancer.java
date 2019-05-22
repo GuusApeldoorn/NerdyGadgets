@@ -10,8 +10,21 @@ package projectkbsd;
  * @author Marc
  */
 public class Databaseloadbalancer extends Component {
-    
-    public Databaseloadbalancer(double availability, int price ) {
+
+    private double availability;
+    private int price;
+
+    public Databaseloadbalancer(double availability, int price) {
         super("Databaseloadbalancer", availability, price);
+        this.availability = availability;
+        this.price = price;
+    }
+
+    public double getAvailability() {
+        return this.availability;
+    }
+
+    public int getPrice() {
+        return this.price;
     }
 }

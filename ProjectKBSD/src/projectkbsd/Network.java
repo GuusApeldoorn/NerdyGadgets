@@ -12,21 +12,33 @@ import java.util.ArrayList;
  * @author Marc
  */
 public class Network {
+
     private ArrayList<Component> list;
     private ArrayList<Component> uniqueList;
-    
-    public Network(){
+
+    public Network() {
         this.list = new ArrayList<Component>();
         this.uniqueList = new ArrayList<Component>();
     }
     
+    
     // toevoegen component aan hoofdscherm om te kunnen slepen.
     public void addComponent(Component cn) {
         this.list.add(cn);
+        System.out.println("erere");
     }
     
+    public ArrayList<Component> getUniqueList() {
+        System.out.println("gett");
+        for(Component cpn : list) {
+            System.out.println("erere");
+        }
+        return list;
+    }
     // toevoegen component voor Opslaan van het netwerk.
     public void addUniqueComponent(Component cn) {
         this.uniqueList.add(cn);
-    }
+        System.out.println("lelelele");//
+    }      
+
 }
