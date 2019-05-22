@@ -43,6 +43,8 @@ public class JDialogws extends JDialog implements ActionListener {
         jLabel9 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
+        //JProgressBar1 = new javax.swing.JProgressBar();
+
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

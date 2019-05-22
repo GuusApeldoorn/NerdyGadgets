@@ -6,13 +6,11 @@
 package projectkbsdmonitor;
 
 
+import JDialogs.*;
 import JPanels.*;
 
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 import javax.swing.*;
 /**
  *
@@ -34,7 +32,7 @@ public class Monitoring extends JFrame implements ActionListener {
     private JPaneldbl jPanel4;
     private Timer t1;
     private static int i;
-    
+
     public Monitoring (Monitor monitor) {
         this.monitor = monitor;
         setSize(new java.awt.Dimension(1036, 242));
@@ -195,6 +193,57 @@ public class Monitoring extends JFrame implements ActionListener {
                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(40, Short.MAX_VALUE))
         );
+
+
+        /* Dit zorgt er voor dat er een JDialog tevoorschijn komts als op de componenten klikt  gemaakt door daniel XD*/
+        jButton1.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e)  {
+
+                JDialogws dialog = new JDialogws();
+                dialog.pack();
+                dialog.setLocationRelativeTo(null);
+                dialog.setVisible(true);
+
+            }
+        });
+
+        jButton2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e)  {
+
+                JDialogdbs dialog = new JDialogdbs();
+                dialog.pack();
+                dialog.setLocationRelativeTo(null);
+                dialog.setVisible(true);
+
+            }
+        });
+
+        jButton3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e)  {
+
+                JDialogfw dialog = new JDialogfw();
+                dialog.pack();
+                dialog.setLocationRelativeTo(null);
+                dialog.setVisible(true);
+
+            }
+        });
+
+        jButton4.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e)  {
+
+                JDialogdbl dialog = new JDialogdbl();
+                dialog.pack();
+                dialog.setLocationRelativeTo(null);
+                dialog.setVisible(true);
+
+
+            }
+        });
 
         pack();
     }

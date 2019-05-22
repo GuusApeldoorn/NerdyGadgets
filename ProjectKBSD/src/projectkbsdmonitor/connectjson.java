@@ -21,6 +21,7 @@ public class connectjson {
     public static void parse(String jsonString) {
 
         JSONArray server = new JSONArray(jsonString);
+        ArrayList<String> dataM = new ArrayList<String>();
 
 
 
@@ -35,9 +36,8 @@ public class connectjson {
 
             System.out.println("uptime:" + uptime + " nameserver:" + name + " timestamp:" + timestamp + " Diskfree:" + diskFree + " diskused:" + diskUsed + " CPU:" + cpu);
 
-            ArrayList<String> dataM = new ArrayList<String>();
-            for (int x=0; x<JSONArray.length(); x++) {
-                dataM.add( JSONArray.getString(x) );
+            for (int a =0; a <server.length(); a ++) {
+                dataM.add( server.getString(a) );
             }
         }
 
