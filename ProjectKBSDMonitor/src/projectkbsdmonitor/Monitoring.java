@@ -241,6 +241,7 @@ public class Monitoring extends JFrame implements ActionListener {
                 dialog.setLocationRelativeTo(null);
                 dialog.setVisible(true);
 
+
             }
         });
 

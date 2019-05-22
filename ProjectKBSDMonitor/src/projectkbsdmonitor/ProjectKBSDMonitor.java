@@ -32,6 +32,10 @@ public class ProjectKBSDMonitor {
         m1.addComponentWebserver(w4);
         Monitoring m01 = new Monitoring(m1);
 
+        connectjson monitorData = new connectjson();
+
+        monitorData.getConnection();
+
 
 
 
