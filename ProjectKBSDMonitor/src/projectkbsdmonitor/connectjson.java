@@ -35,9 +35,9 @@ public class connectjson {
 
             System.out.println("uptime:" + uptime + " nameserver:" + name + " timestamp:" + timestamp + " Diskfree:" + diskFree + " diskused:" + diskUsed + " CPU:" + cpu);
 
-            ArrayList<String> mData = new ArrayList<String>();
-            for (int i=0; i<JSONArray.length(); i++) {
-                list.add( jsonArray.getString(i) );
+            ArrayList<String> dataM = new ArrayList<String>();
+            for (int x=0; x<JSONArray.length(); x++) {
+                dataM.add( JSONArray.getString(x) );
             }
         }
 
