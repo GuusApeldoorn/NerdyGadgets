@@ -35,7 +35,7 @@ public class Algorithm {
     private int prijs = 0;
 
     //aantal combinaties mogelijk
-    private int aantalCombinatiesMogelijk, nFactor = 2, fFactor;
+    private int aantalCombinatiesMogelijk, nFactor = 2, fFactor, scope;
 
     private String[][] test = new String[1][1];
 
@@ -53,14 +53,16 @@ public class Algorithm {
     public void calculateAvailabilityPercentage(double AvailabilityPercentage) {
 
         //berekenen scope
-        for (fFactor = 1; fFactor <= 1; fFactor++) { //net zolang doorgaan totdat het beschikbaarheidspercentage gematched is
+        d:
+        for (scope = 1; scope <= fFactor; scope++) { //net zolang doorgaan totdat het beschikbaarheidspercentage gematched is
             calculateAvailabilityPercentage(fFactor, fFactor, fFactor, fFactor, fFactor, fFactor);
-            if (antwoordFormule >= AvailabilityPercentage) {
-                test = calculateCombinations(6, fFactor);
-                break;
+            System.out.println(antwoordFormule);
+            if (antwoordFormule < AvailabilityPercentage) {
+                fFactor++;
             } else {
                 fFactor++;
-                continue;
+                test = calculateCombinations(6, fFactor);
+                break d;
             }
         }
 
