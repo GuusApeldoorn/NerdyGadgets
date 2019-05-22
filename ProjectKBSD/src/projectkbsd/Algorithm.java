@@ -26,7 +26,7 @@ public class Algorithm {
     private static final int webserver1_prijs = 2200, webserver2_prijs = 3200, webserver3_prijs = 5100;   //prijzen van de webservers
 
     //antwoord
-    private double antwoord, antwoordBijOntwerp;
+    private double antwoord, antwoordBijOntwerp, antwoordFormule;
 
     //goedkoopste prijs gevonden
     private int[] goedkoopstePrijs = new int[2]; //1e plek voor goedkoopste ontwerp, 2e plek om een waarde te vergelijken met plek 1.
@@ -35,7 +35,9 @@ public class Algorithm {
     private int prijs = 0;
 
     //aantal combinaties mogelijk
-    private int aantalCombinatiesMogelijk, nFactor = 2;
+    private int aantalCombinatiesMogelijk, nFactor = 2, fFactor;
+
+    private String[][] test = new String[1][1];
 
     private int[] mogelijkheden = new int[6];
     private int[] mogelijkhedenGoedOntwerp = new int[6];
@@ -50,10 +52,20 @@ public class Algorithm {
 
     public void calculateAvailabilityPercentage(double AvailabilityPercentage) {
 
+        //berekenen scope
+        for (fFactor = 1; fFactor <= 1; fFactor++) { //net zolang doorgaan totdat het beschikbaarheidspercentage gematched is
+            calculateAvailabilityPercentage(fFactor, fFactor, fFactor, fFactor, fFactor, fFactor);
+            if (antwoordFormule >= AvailabilityPercentage) {
+                test = calculateCombinations(6, fFactor);
+                break;
+            } else {
+                fFactor++;
+                continue;
+            }
+        }
+
         a:
         for (int k = 1; k < nFactor; k++) {
-
-            String[][] test = calculateCombinations(6, nFactor);
 
             b:
             for (int i = 0; i < test.length; i++) {
@@ -129,6 +141,8 @@ public class Algorithm {
             } else {
                 nFactor++;
             }
+            fFactor++;
+            test = calculateCombinations(6, fFactor);
 
         }
 
@@ -211,6 +225,11 @@ public class Algorithm {
         }
     }
 
+    private double calculateAvailabilityPercentage(int db1, int db2, int db3, int web1, int web2, int web3) {
+        antwoordFormule = ((0.99999 * 0.99999) * (1 - ((Math.pow(1 - 0.90, db1)) * (Math.pow(1 - 0.95, db2)) * (Math.pow(1 - 0.98, db3)))) * ((1 - ((Math.pow(1 - 0.80, web1)) * (Math.pow(1 - 0.90, web2)) * (Math.pow(1 - 0.95, web3)))) * 100));
+        return antwoordFormule;
+    }
+
     public int getPrijs() {
         return this.goedkoopstePrijs[0];
     }
@@ -218,58 +237,9 @@ public class Algorithm {
     public double getAvailabilityPercentage() {
         return this.antwoordBijOntwerp;
     }
-    
+
     public int[] getMogelijkhedenGoedOntwerp() {
         return mogelijkhedenGoedOntwerp;
     }
-
-    public static double getDbserver1() {
-        return dbserver1;
-    }
-
-    public static double getDbserver2() {
-        return dbserver2;
-    }
-
-    public static double getDbserver3() {
-        return dbserver3;
-    }
-
-    public static double getWebserver1() {
-        return webserver1;
-    }
-
-    public static double getWebserver2() {
-        return webserver2;
-    }
-
-    public static double getWebserver3() {
-        return webserver3;
-    }
-
-    public static int getDbserver1_prijs() {
-        return dbserver1_prijs;
-    }
-
-    public static int getDbserver2_prijs() {
-        return dbserver2_prijs;
-    }
-
-    public static int getDbserver3_prijs() {
-        return dbserver3_prijs;
-    }
-
-    public static int getWebserver1_prijs() {
-        return webserver1_prijs;
-    }
-
-    public static int getWebserver2_prijs() {
-        return webserver2_prijs;
-    }
-
-    public static int getWebserver3_prijs() {
-        return webserver3_prijs;
-    }
-    
 
 }
