@@ -224,10 +224,10 @@ public class Monitoring extends JFrame implements ActionListener {
             @Override
             public void actionPerformed(ActionEvent e)  {
 
-//                JDialogfw dialog = new JDialogfw();
-//                dialog.pack();
-//                dialog.setLocationRelativeTo(null);
-//                dialog.setVisible(true);
+                JDialogfw dialog = new JDialogfw();
+                dialog.pack();
+                dialog.setLocationRelativeTo(null);
+                dialog.setVisible(true);
 
             }
         });

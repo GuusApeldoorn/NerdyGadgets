@@ -8,7 +8,7 @@
     <properties/>
     <border type="none"/>
     <children>
-      <tabbedpane id="fb88b" binding="tabbedPane1" default-binding="true">
+      <tabbedpane id="5a21c" binding="tabbedPane1" default-binding="true">
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false">
             <preferred-size width="200" height="200"/>
@@ -17,7 +17,7 @@
         <properties/>
         <border type="none"/>
         <children>
-          <grid id="6e3d6" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+          <grid id="d8e0a" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
               <tabbedpane title="Server 1"/>
@@ -25,7 +25,7 @@
             <properties/>
             <border type="none"/>
             <children>
-              <grid id="a940c" layout-manager="GridLayoutManager" row-count="5" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+              <grid id="4e82d" layout-manager="GridLayoutManager" row-count="5" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -33,7 +33,7 @@
                 <properties/>
                 <border type="none"/>
                 <children>
-                  <component id="5f58b" class="javax.swing.JLabel">
+                  <component id="c5a3b" class="javax.swing.JLabel">
                     <constraints>
                       <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -41,7 +41,7 @@
                       <text value="Disc space:"/>
                     </properties>
                   </component>
-                  <component id="186d7" class="javax.swing.JLabel">
+                  <component id="e223c" class="javax.swing.JLabel">
                     <constraints>
                       <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -49,7 +49,7 @@
                       <text value="CPU usage: "/>
                     </properties>
                   </component>
-                  <component id="bc1d9" class="javax.swing.JLabel">
+                  <component id="b3e63" class="javax.swing.JLabel">
                     <constraints>
                       <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -57,7 +57,7 @@
                       <text value="Uptime:"/>
                     </properties>
                   </component>
-                  <component id="1d701" class="javax.swing.JLabel">
+                  <component id="adfbf" class="javax.swing.JLabel">
                     <constraints>
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -65,19 +65,19 @@
                       <text value="Status:"/>
                     </properties>
                   </component>
-                  <component id="52fa4" class="javax.swing.JProgressBar" binding="progressBar1" default-binding="true">
+                  <component id="37e71" class="javax.swing.JProgressBar" binding="progressBar1" default-binding="true">
                     <constraints>
                       <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties/>
                   </component>
-                  <component id="17040" class="javax.swing.JProgressBar" binding="progressBar2" default-binding="true">
+                  <component id="ecdef" class="javax.swing.JProgressBar" binding="progressBar2" default-binding="true">
                     <constraints>
                       <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties/>
                   </component>
-                  <component id="6ee37" class="javax.swing.JLabel" binding="JLabel6">
+                  <component id="596e" class="javax.swing.JLabel" binding="JLabel6">
                     <constraints>
                       <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -85,7 +85,7 @@
                       <text value="Nog 190GB van de 1TB vrij"/>
                     </properties>
                   </component>
-                  <component id="b05b7" class="javax.swing.JLabel" binding="JLabel5">
+                  <component id="fe835" class="javax.swing.JLabel" binding="JLabel5">
                     <constraints>
                       <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -93,7 +93,7 @@
                       <text value="1 tb"/>
                     </properties>
                   </component>
-                  <component id="80415" class="javax.swing.JLabel" binding="JLabel4">
+                  <component id="6c2d" class="javax.swing.JLabel" binding="JLabel4">
                     <constraints>
                       <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -101,7 +101,7 @@
                       <text value="0"/>
                     </properties>
                   </component>
-                  <component id="93816" class="javax.swing.JLabel" binding="JLabel3">
+                  <component id="d3e85" class="javax.swing.JLabel" binding="JLabel3">
                     <constraints>
                       <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -109,15 +109,15 @@
                       <text value="85%"/>
                     </properties>
                   </component>
-                  <component id="d22c2" class="javax.swing.JLabel" binding="JLabel2">
+                  <component id="dba8d" class="javax.swing.JLabel" binding="JLabel2">
                     <constraints>
                       <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <text value="100%"/>
+                      <text value="40"/>
                     </properties>
                   </component>
-                  <component id="d30ce" class="javax.swing.JLabel" binding="JLabel1">
+                  <component id="cb9ce" class="javax.swing.JLabel" binding="JLabel1">
                     <constraints>
                       <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>

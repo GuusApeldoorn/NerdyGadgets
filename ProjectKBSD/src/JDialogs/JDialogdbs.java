@@ -1,11 +1,15 @@
 package JDialogs;
 
+import projectkbsdmonitor.connectjson;
+
 import javax.swing.*;
 import java.awt.*;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 public class JDialogdbs extends JDialog {
     private JPanel contentPane;
-    private JTabbedPane tabbedPane1;
     private JProgressBar progressBar1;
     private JProgressBar progressBar2;
     private JLabel JLabel1;
@@ -15,19 +19,108 @@ public class JDialogdbs extends JDialog {
     private JLabel JLabel5;
     private JLabel JLabel6;
     private JLabel JLabel7; // beschikbaarheid database server 2
-    private JLabel JLabel8;
-    private JLabel JLabel9;
-    private JLabel JLabel10;
-    private JLabel JLabel11;
-    private JLabel JLabel12;
-    private JProgressBar JPogressBar3;
-    private JProgressBar JProgressBar4;
+    private JLabel JLabel8; //uptime database server 2
+    private JLabel JLabel9; //cpu load database server 2
+    private JLabel JLabel10; //disk space database server 2
+    private JLabel JLabel11; //einde van progress bar (x gb)
+    private JLabel JLabel12; //hoeveel gb van de hoeveel gb
+    private JProgressBar progressBar3;
+    private JProgressBar progressBar4;
+    private JTabbedPane tabbedPane1;
 
 
     public JDialogdbs() {
         setTitle("Monitor dialog");
         setContentPane(contentPane);
         setModal(true);
+
+        connectjson MonitorS = new connectjson();
+        String response = MonitorS.getConnection();
+        MonitorS.setTesttest123(MonitorS.parse(response));
+
+        System.out.println(MonitorS.getTesttest123());
+
+        //webserver1
+        if (MonitorS.getTesttest123().get(0).getUptime() > 0) {
+            JLabel1.setText("Beschikbaar");
+        } else {
+            JLabel1.setText("Offline");
+        }
+        JLabel2.setText(Float.toString(MonitorS.getTesttest123().get(2).getUptime()) + " Minuten");
+        JLabel3.setText(Double.toString(MonitorS.getTesttest123().get(2).getCpu()) + "%");
+        JLabel4.setText(Integer.toString(MonitorS.getTesttest123().get(2).getDiksfree() + MonitorS.getTesttest123().get(2).getDiskused()) + " GB");
+        JLabel5.setText(Integer.toString(MonitorS.getTesttest123().get(2).getDiksfree() + MonitorS.getTesttest123().get(2).getDiskused()) + " GB");
+        JLabel6.setText("Nog " + Integer.toString(MonitorS.getTesttest123().get(2).getDiksfree()) + " GB van de " + Integer.toString(MonitorS.getTesttest123().get(2).getDiksfree() + MonitorS.getTesttest123().get(2).getDiskused()) + " GB vrij");
+        progressBar1.setForeground(Color.BLUE);
+        progressBar1.setValue((int) MonitorS.getTesttest123().get(2).getCpu());
+        progressBar2.setForeground(Color.BLUE);
+        progressBar2.setValue(MonitorS.getTesttest123().get(2).getDiskused() * 11);
+
+        //webserver2
+        if (MonitorS.getTesttest123().get(3).getUptime() > 0) {
+            JLabel7.setText("Beschikbaar");
+        } else {
+            JLabel7.setText("Offline");
+        }
+        JLabel8.setText(Float.toString(MonitorS.getTesttest123().get(3).getUptime()) + " Minuten");
+        JLabel9.setText(Double.toString(MonitorS.getTesttest123().get(3).getCpu()) + "%");
+        JLabel10.setText(Integer.toString(MonitorS.getTesttest123().get(3).getDiksfree() + MonitorS.getTesttest123().get(1).getDiskused()) + " GB");
+        JLabel11.setText(Integer.toString(MonitorS.getTesttest123().get(3).getDiksfree() + MonitorS.getTesttest123().get(1).getDiskused()) + " GB");
+        JLabel12.setText("Nog " + Integer.toString(MonitorS.getTesttest123().get(3).getDiksfree()) + " GB van de " + Integer.toString(MonitorS.getTesttest123().get(3).getDiksfree() + MonitorS.getTesttest123().get(3).getDiskused()) + " GB vrij");
+        progressBar3.setForeground(Color.BLUE);
+        progressBar3.setValue((int) MonitorS.getTesttest123().get(3).getCpu());
+        progressBar4.setForeground(Color.BLUE);
+        progressBar4.setValue(MonitorS.getTesttest123().get(3).getDiskused() * 11);
+
+        ScheduledExecutorService e = Executors.newSingleThreadScheduledExecutor();
+        e.scheduleAtFixedRate(new Runnable() {
+            @Override
+            public void run() {
+                // do stuff
+                connectjson MonitorS = new connectjson();
+                String response = MonitorS.getConnection();
+                MonitorS.setTesttest123(MonitorS.parse(response));
+
+                SwingUtilities.invokeLater(new Runnable() {
+                    // of course, you could improve this by moving dateformat variable elsewhere
+
+                    @Override
+                    public void run() {
+                        //webserver1
+                        if (MonitorS.getTesttest123().get(2).getUptime() > 0) {
+                            JLabel1.setText("Beschikbaar");
+                        } else {
+                            JLabel1.setText("Offline");
+                        }
+                        JLabel2.setText(Float.toString(MonitorS.getTesttest123().get(2).getUptime()) + " Minuten");
+                        JLabel3.setText(Double.toString(MonitorS.getTesttest123().get(2).getCpu()) + "%");
+                        JLabel4.setText(Integer.toString(MonitorS.getTesttest123().get(2).getDiksfree() + MonitorS.getTesttest123().get(2).getDiskused()) + " GB");
+                        JLabel5.setText(Integer.toString(MonitorS.getTesttest123().get(2).getDiksfree() + MonitorS.getTesttest123().get(2).getDiskused()) + " GB");
+                        JLabel6.setText("Nog " + Integer.toString(MonitorS.getTesttest123().get(2).getDiksfree()) + " GB van de " + Integer.toString(MonitorS.getTesttest123().get(2).getDiksfree() + MonitorS.getTesttest123().get(2).getDiskused()) + " GB vrij");
+                        progressBar1.setForeground(Color.BLUE);
+                        progressBar1.setValue((int) MonitorS.getTesttest123().get(2).getCpu());
+                        progressBar2.setForeground(Color.BLUE);
+                        progressBar2.setValue(MonitorS.getTesttest123().get(2).getDiskused() * 11);
+
+                        //webserver2
+                        if (MonitorS.getTesttest123().get(3).getUptime() > 0) {
+                            JLabel7.setText("Beschikbaar");
+                        } else {
+                            JLabel7.setText("Offline");
+                        }
+                        JLabel8.setText(Float.toString(MonitorS.getTesttest123().get(3).getUptime()) + " Minuten");
+                        JLabel9.setText(Double.toString(MonitorS.getTesttest123().get(3).getCpu()) + "%");
+                        JLabel10.setText(Integer.toString(MonitorS.getTesttest123().get(3).getDiksfree() + MonitorS.getTesttest123().get(3).getDiskused()) + " GB");
+                        JLabel11.setText(Integer.toString(MonitorS.getTesttest123().get(3).getDiksfree() + MonitorS.getTesttest123().get(3).getDiskused()) + " GB");
+                        JLabel12.setText("Nog " + Integer.toString(MonitorS.getTesttest123().get(3).getDiksfree()) + " GB van de " + Integer.toString(MonitorS.getTesttest123().get(3).getDiksfree() + MonitorS.getTesttest123().get(3).getDiskused()) + " GB vrij");
+                        progressBar3.setForeground(Color.BLUE);
+                        progressBar3.setValue((int) MonitorS.getTesttest123().get(3).getCpu());
+                        progressBar4.setForeground(Color.BLUE);
+                        progressBar4.setValue(MonitorS.getTesttest123().get(3).getDiskused() * 11);
+                    }
+                });
+            }
+        }, 0, 1, TimeUnit.SECONDS);
     }
 
     {
@@ -54,7 +147,7 @@ public class JDialogdbs extends JDialog {
         tabbedPane1.addTab("Server 1", panel1);
         final JPanel panel2 = new JPanel();
         panel2.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(5, 4, new Insets(0, 0, 0, 0), -1, -1));
-        panel1.add(panel2, new com.intellij.uiDesigner.core.GridConstraints(0, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        panel1.add(panel2, new com.intellij.uiDesigner.core.GridConstraints(0, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
         final JLabel label1 = new JLabel();
         label1.setText("Disc space:");
         panel2.add(label1, new com.intellij.uiDesigner.core.GridConstraints(3, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
@@ -84,7 +177,7 @@ public class JDialogdbs extends JDialog {
         JLabel3.setText("85%");
         panel2.add(JLabel3, new com.intellij.uiDesigner.core.GridConstraints(2, 1, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         JLabel2 = new JLabel();
-        JLabel2.setText("100%");
+        JLabel2.setText("40");
         panel2.add(JLabel2, new com.intellij.uiDesigner.core.GridConstraints(1, 1, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         JLabel1 = new JLabel();
         JLabel1.setText("Beschikbaar");
@@ -107,10 +200,10 @@ public class JDialogdbs extends JDialog {
         final JLabel label8 = new JLabel();
         label8.setText("Status:");
         panel4.add(label8, new com.intellij.uiDesigner.core.GridConstraints(0, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
-        JPogressBar3 = new JProgressBar();
-        panel4.add(JPogressBar3, new com.intellij.uiDesigner.core.GridConstraints(2, 2, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
-        JProgressBar4 = new JProgressBar();
-        panel4.add(JProgressBar4, new com.intellij.uiDesigner.core.GridConstraints(3, 2, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        progressBar3 = new JProgressBar();
+        panel4.add(progressBar3, new com.intellij.uiDesigner.core.GridConstraints(2, 2, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        progressBar4 = new JProgressBar();
+        panel4.add(progressBar4, new com.intellij.uiDesigner.core.GridConstraints(3, 2, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         JLabel12 = new JLabel();
         JLabel12.setText("Nog 190GB van de 1TB vrij");
         panel4.add(JLabel12, new com.intellij.uiDesigner.core.GridConstraints(4, 2, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
@@ -121,7 +214,7 @@ public class JDialogdbs extends JDialog {
         JLabel10.setText("0");
         panel4.add(JLabel10, new com.intellij.uiDesigner.core.GridConstraints(3, 1, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         JLabel9 = new JLabel();
-        JLabel9.setText("85%");
+        JLabel9.setText("80%");
         panel4.add(JLabel9, new com.intellij.uiDesigner.core.GridConstraints(2, 1, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         JLabel8 = new JLabel();
         JLabel8.setText("100%");

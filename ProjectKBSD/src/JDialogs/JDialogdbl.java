@@ -8,12 +8,12 @@ public class JDialogdbl extends JDialog {
     private JTabbedPane tabbedPane1;
     private JProgressBar progressBar1;
     private JProgressBar progressBar2;
-    private JLabel JLabel1;
-    private JLabel JLabel2;
-    private JLabel JLabel3;
-    private JLabel JLabel4;
-    private JLabel JLabel5;
     private JLabel JLabel6;
+    private JLabel JLabel5;
+    private JLabel JLabel4;
+    private JLabel JLabel3;
+    private JLabel JLabel2;
+    private JLabel JLabel1;
 
 
     public JDialogdbl() {
@@ -78,7 +78,7 @@ public class JDialogdbl extends JDialog {
         JLabel3.setText("85%");
         panel2.add(JLabel3, new com.intellij.uiDesigner.core.GridConstraints(2, 1, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         JLabel2 = new JLabel();
-        JLabel2.setText("100%");
+        JLabel2.setText("40");
         panel2.add(JLabel2, new com.intellij.uiDesigner.core.GridConstraints(1, 1, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         JLabel1 = new JLabel();
         JLabel1.setText("Beschikbaar");
