@@ -62,13 +62,13 @@ public class Monitoring extends JFrame implements ActionListener {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Marc\\Documents\\imageskbs\\webserver.png")); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon("webserver1.png")); // NOI18N
 
-        jButton2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Marc\\Documents\\imageskbs\\databaseserver.png")); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon("databaseserver1.png")); // NOI18N
 
-        jButton3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Marc\\Documents\\imageskbs\\firewall.png")); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon("firewall.png")); // NOI18N
 
-        jButton4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Marc\\Documents\\imageskbs\\firewall.png")); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon("firewall.png")); // NOI18N
 
         jPanel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel1.setPreferredSize(new java.awt.Dimension(30, 30));
@@ -224,10 +224,10 @@ public class Monitoring extends JFrame implements ActionListener {
             @Override
             public void actionPerformed(ActionEvent e)  {
 
-                JDialogfw dialog = new JDialogfw();
-                dialog.pack();
-                dialog.setLocationRelativeTo(null);
-                dialog.setVisible(true);
+//                JDialogfw dialog = new JDialogfw();
+//                dialog.pack();
+//                dialog.setLocationRelativeTo(null);
+//                dialog.setVisible(true);
 
             }
         });
@@ -245,6 +245,7 @@ public class Monitoring extends JFrame implements ActionListener {
             }
         });
 
+        setResizable(false);
         pack();
     }
     

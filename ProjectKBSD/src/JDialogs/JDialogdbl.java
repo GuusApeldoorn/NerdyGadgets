@@ -80,6 +80,7 @@ public class JDialogdbl extends JDialog {
         final JLabel label10 = new JLabel();
         label10.setText("Beschikbaar");
         panel2.add(label10, new com.intellij.uiDesigner.core.GridConstraints(0, 1, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+    setResizable(false);
     }
 
     /**

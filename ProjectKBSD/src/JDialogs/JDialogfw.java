@@ -76,6 +76,7 @@ public class JDialogfw extends JDialog {
         final JLabel label10 = new JLabel();
         label10.setText("Nog 190GB van de 1TB vrij");
         panel2.add(label10, new com.intellij.uiDesigner.core.GridConstraints(4, 2, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        setResizable(false);
     }
 
     /**
