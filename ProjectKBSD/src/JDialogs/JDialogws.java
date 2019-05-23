@@ -1,9 +1,11 @@
 package JDialogs;
 
+import projectkbsdmonitor.Node;
 import projectkbsdmonitor.connectjson;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 public class JDialogws extends JDialog {
     private JPanel contentPane;
@@ -15,7 +17,7 @@ public class JDialogws extends JDialog {
     private JLabel JLabel3;
     private JLabel JLabel4;
     private JLabel JLabel5;
-
+    private ArrayList<Node> test123;
 
 
     public JDialogws() {
@@ -26,17 +28,15 @@ public class JDialogws extends JDialog {
         setModal(true);
         // Uptime
         connectjson Uptime = new connectjson();
-        double test = Uptime.getNodes().get(0).getCpu();
+        test123 = Uptime.getTesttest();
+        double test = test123.get(0).getCpu();
         JLabel1.setText(Double.toString(test));
         //Float uptime1 = Uptime.getUptime(0) / 60;
         //Float uptime2 = uptime1 / 24;
 
 
 
-
-        //webserver1
-
-        JLabel1.setText("");
+        //webserverJLabel1.setText("");
         //JLabel2.setText(String.valueOf(uptime2));
 
         //int Uptime =

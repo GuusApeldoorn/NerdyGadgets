@@ -15,7 +15,7 @@ import java.util.TimerTask;
 
 public class connectjson {
 
-    public ArrayList<Node> Nodes;
+    private ArrayList<Node> testtest = new ArrayList<Node>();
 
 //    public connectjson(){
 //       Nodes = new ArrayList<Node>();
@@ -67,13 +67,13 @@ public class connectjson {
 //    }
 
 
-    public ArrayList<Node> getNodes() {
-        return Nodes;
-    }
+//    public ArrayList<Node> getNodes() {
+//        return Nodes;
+//    }
 
     public ArrayList<Node> parse(String jsonString) {
         JSONArray server = new JSONArray(jsonString);
-        Nodes = new ArrayList<Node>();
+        ArrayList<Node> Nodes = new ArrayList<Node>();
 
 
         for (int i = 0; i < server.length(); i++) {
@@ -206,6 +206,10 @@ public class connectjson {
 
         }
 
+        public ArrayList<Node> getTesttest() {
+        return testtest;
+        }
+
         // methode die er voor zorgt dat er om de 2 seconden de data.json op nieuw wordt aangevraagd en verwerkt worden
         // zo dat de gegevens in de applicatie up to dat blijven.
         public void Loop() {
@@ -216,7 +220,7 @@ public class connectjson {
                     connectjson Connect = new connectjson();
                     String response = Connect.getConnection();
                     Connect.Print(Connect.parse(response));
-
+                    testtest = Connect.parse(response);
 
                 }
 
@@ -230,27 +234,29 @@ public class connectjson {
 
         public void Print(ArrayList<Node> arrayList){
 
-        arrayList.get(0).getUptime();
-//            for(int i = 0; i < arrayList.size(); i++) {
-//                System.out.println(arrayList.get(i));
-//            }
+        //arrayList.get(0).getUptime();
+            for(int i = 0; i < arrayList.size(); i++) {
+                System.out.println(arrayList.get(i));
+            }
 
         }
 
-//    public static void main(String[] args){
-//
-//        connectjson Connect = new connectjson();
+    public static void main(String[] args){
+
+
 //        ArrayList<Node> Nodes = Connect.getNodes();
-//        Connect.Print(Nodes);
-//
+        connectjson Connect = new connectjson();
+        String response = Connect.getConnection();
+        Connect.Print(Connect.parse(response));
+
 //        for(int a = 0; a < Connect.getNodes().size(); a++) {
 //            System.out.println(Connect.getNodes().get(a)+", ");
 //        }
-//
-//
-//
-//
-//    }
+
+
+
+
+    }
 
 
 
