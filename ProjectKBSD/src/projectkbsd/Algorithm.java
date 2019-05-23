@@ -1,16 +1,8 @@
-
 package projectkbsd;
 
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 
 /**
  *
@@ -38,7 +30,7 @@ public class Algorithm {
     private int prijs = 0;
 
     //aantal combinaties mogelijk
-    private int aantalCombinatiesMogelijk, nFactor = 2, fFactor, scope;
+    private int aantalCombinatiesMogelijk, nFactor = 2, fFactor = 1, scope;
 
     private String[][] test = new String[1][1];
 
@@ -230,9 +222,8 @@ public class Algorithm {
         }
     }
 
-    private double calculateAvailabilityPercentage(int db1, int db2, int db3, int web1, int web2, int web3) {
+    private void calculateAvailabilityPercentage(int db1, int db2, int db3, int web1, int web2, int web3) {
         antwoordFormule = ((0.99999 * 0.99999) * (1 - ((Math.pow(1 - 0.90, db1)) * (Math.pow(1 - 0.95, db2)) * (Math.pow(1 - 0.98, db3)))) * ((1 - ((Math.pow(1 - 0.80, web1)) * (Math.pow(1 - 0.90, web2)) * (Math.pow(1 - 0.95, web3)))) * 100));
-        return antwoordFormule;
     }
 
     public int getPrijs() {
@@ -247,4 +238,53 @@ public class Algorithm {
         return mogelijkhedenGoedOntwerp;
     }
 
+    public static int getDbserver1_prijs() {
+        return dbserver1_prijs;
+    }
+
+    public static int getDbserver2_prijs() {
+        return dbserver2_prijs;
+    }
+
+    public static int getDbserver3_prijs() {
+        return dbserver3_prijs;
+    }
+
+    public static int getWebserver1_prijs() {
+        return webserver1_prijs;
+    }
+
+    public static int getWebserver2_prijs() {
+        return webserver2_prijs;
+    }
+
+    public static int getWebserver3_prijs() {
+        return webserver3_prijs;
+    }
+
+    public static double getDbserver1() {
+        return dbserver1;
+    }
+
+    public static double getDbserver2() {
+        return dbserver2;
+    }
+
+    public static double getDbserver3() {
+        return dbserver3;
+    }
+
+    public static double getWebserver1() {
+        return webserver1;
+    }
+
+    public static double getWebserver2() {
+        return webserver2;
+    }
+
+    public static double getWebserver3() {
+        return webserver3;
+    }
+
+    
 }
