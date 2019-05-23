@@ -77,7 +77,7 @@
                     </constraints>
                     <properties/>
                   </component>
-                  <component id="ca587" class="javax.swing.JLabel">
+                  <component id="ca587" class="javax.swing.JLabel" binding="label5">
                     <constraints>
                       <grid row="4" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -197,7 +197,7 @@
                     </constraints>
                     <properties/>
                   </component>
-                  <component id="cf484" class="javax.swing.JLabel">
+                  <component id="cf484" class="javax.swing.JLabel" binding="label11">
                     <constraints>
                       <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -205,7 +205,7 @@
                       <text value="Nog 190GB van de 1TB vrij"/>
                     </properties>
                   </component>
-                  <component id="3fdd5" class="javax.swing.JLabel">
+                  <component id="3fdd5" class="javax.swing.JLabel" binding="label12">
                     <constraints>
                       <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -213,7 +213,7 @@
                       <text value="1 tb"/>
                     </properties>
                   </component>
-                  <component id="bc0c9" class="javax.swing.JLabel">
+                  <component id="bc0c9" class="javax.swing.JLabel" binding="label13">
                     <constraints>
                       <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -221,15 +221,15 @@
                       <text value="0"/>
                     </properties>
                   </component>
-                  <component id="d3e9b" class="javax.swing.JLabel">
+                  <component id="d3e9b" class="javax.swing.JLabel" binding="label14">
                     <constraints>
                       <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <text value="85%"/>
+                      <text value="80%"/>
                     </properties>
                   </component>
-                  <component id="1c761" class="javax.swing.JLabel">
+                  <component id="1c761" class="javax.swing.JLabel" binding="label15">
                     <constraints>
                       <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -237,7 +237,7 @@
                       <text value="100%"/>
                     </properties>
                   </component>
-                  <component id="5b67c" class="javax.swing.JLabel">
+                  <component id="5b67c" class="javax.swing.JLabel" binding="label16">
                     <constraints>
                       <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>

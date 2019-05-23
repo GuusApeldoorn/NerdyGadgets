@@ -8,6 +8,12 @@ public class JDialogfw extends JDialog {
     private JTabbedPane tabbedPane1;
     private JProgressBar progressBar1;
     private JProgressBar progressBar2;
+    private JLabel JLabel6;
+    private JLabel JLabel5;
+    private JLabel JLabel4;
+    private JLabel JLabel3;
+    private JLabel JLabel2;
+    private JLabel JLabel1;
 
 
     public JDialogfw() {
@@ -76,7 +82,6 @@ public class JDialogfw extends JDialog {
         final JLabel label10 = new JLabel();
         label10.setText("Nog 190GB van de 1TB vrij");
         panel2.add(label10, new com.intellij.uiDesigner.core.GridConstraints(4, 2, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
-        setResizable(false);
     }
 
     /**
