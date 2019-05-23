@@ -1,13 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package projectkbsd;
 
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
 
 /**
  *
@@ -35,7 +38,7 @@ public class Algorithm {
     private int prijs = 0;
 
     //aantal combinaties mogelijk
-    private int aantalCombinatiesMogelijk, nFactor = 2, fFactor;
+    private int aantalCombinatiesMogelijk, nFactor = 2, fFactor, scope;
 
     private String[][] test = new String[1][1];
 
@@ -53,14 +56,16 @@ public class Algorithm {
     public void calculateAvailabilityPercentage(double AvailabilityPercentage) {
 
         //berekenen scope
-        for (fFactor = 1; fFactor <= 1; fFactor++) { //net zolang doorgaan totdat het beschikbaarheidspercentage gematched is
+        d:
+        for (scope = 1; scope <= fFactor; scope++) { //net zolang doorgaan totdat het beschikbaarheidspercentage gematched is
             calculateAvailabilityPercentage(fFactor, fFactor, fFactor, fFactor, fFactor, fFactor);
-            if (antwoordFormule >= AvailabilityPercentage) {
-                test = calculateCombinations(6, fFactor);
-                break;
+            System.out.println(antwoordFormule);
+            if (antwoordFormule < AvailabilityPercentage) {
+                fFactor++;
             } else {
                 fFactor++;
-                continue;
+                test = calculateCombinations(6, fFactor);
+                break d;
             }
         }
 
@@ -122,7 +127,7 @@ public class Algorithm {
                         schrijfResultaat(mogelijkhedenGoedOntwerp[0], mogelijkhedenGoedOntwerp[1], mogelijkhedenGoedOntwerp[2], mogelijkhedenGoedOntwerp[3], mogelijkhedenGoedOntwerp[4], mogelijkhedenGoedOntwerp[5]);
                     }
 
-                    System.out.println(" ---> " + antwoord + "% voor Ä" + prijs + ",-");
+                    System.out.println(" ---> " + antwoord + "% voor €" + prijs + ",-");
 
                     aantalCombinatiesMogelijk++;
                 }
@@ -191,30 +196,30 @@ public class Algorithm {
 
             writer.write("======================================");
             writer.newLine();
-            writer.write("1 ◊ Firewall(99.999%) voor Ä2000,-");
+            writer.write("1 × Firewall(99.999%) voor €2000,-");
             writer.newLine();
-            writer.write("1 ◊ Loadbalancer(99.999%) voor Ä2000,-");
+            writer.write("1 × Loadbalancer(99.999%) voor €2000,-");
             writer.newLine();
             writer.newLine();
             writer.write("Databaseservers:");
             writer.newLine();
-            writer.write(a + " ◊ HAL9001DB(90%) voor Ä" + a * dbserver1_prijs + ",-");
+            writer.write(a + " × HAL9001DB(90%) voor €" + a * dbserver1_prijs + ",-");
             writer.newLine();
-            writer.write(b + " ◊ HAL9002DB(95%) voor Ä" + b * dbserver2_prijs + ",-");
+            writer.write(b + " × HAL9002DB(95%) voor €" + b * dbserver2_prijs + ",-");
             writer.newLine();
-            writer.write(c + " ◊ HAL9003DB(98%) voor Ä" + c * dbserver3_prijs + ",-");
+            writer.write(c + " × HAL9003DB(98%) voor €" + c * dbserver3_prijs + ",-");
             writer.newLine();
             writer.newLine();
             writer.write("Webservers:");
             writer.newLine();
-            writer.write(d + " ◊ HAL9001W(80%) voor Ä" + d * webserver1_prijs + ",-");
+            writer.write(d + " × HAL9001W(80%) voor €" + d * webserver1_prijs + ",-");
             writer.newLine();
-            writer.write(e + " ◊ HAL9002W(90%) voor Ä" + e * webserver2_prijs + ",-");
+            writer.write(e + " × HAL9002W(90%) voor €" + e * webserver2_prijs + ",-");
             writer.newLine();
-            writer.write(f + " ◊ HAL9003W(95%) voor Ä" + f * webserver3_prijs + ",-");
+            writer.write(f + " × HAL9003W(95%) voor €" + f * webserver3_prijs + ",-");
             writer.newLine();
             writer.newLine();
-            writer.write("totaal: Ä" + prijs + ",- " + "(" + antwoord + "%)");
+            writer.write("totaal: €" + prijs + ",- " + "(" + antwoord + "%)");
             writer.newLine();
             writer.write("======================================");
             writer.newLine();
@@ -240,54 +245,6 @@ public class Algorithm {
 
     public int[] getMogelijkhedenGoedOntwerp() {
         return mogelijkhedenGoedOntwerp;
-    }
-
-    public static double getDbserver1() {
-        return dbserver1;
-    }
-
-    public static double getDbserver2() {
-        return dbserver2;
-    }
-
-    public static double getDbserver3() {
-        return dbserver3;
-    }
-
-    public static double getWebserver1() {
-        return webserver1;
-    }
-
-    public static double getWebserver2() {
-        return webserver2;
-    }
-
-    public static double getWebserver3() {
-        return webserver3;
-    }
-
-    public static int getDbserver1_prijs() {
-        return dbserver1_prijs;
-    }
-
-    public static int getDbserver2_prijs() {
-        return dbserver2_prijs;
-    }
-
-    public static int getDbserver3_prijs() {
-        return dbserver3_prijs;
-    }
-
-    public static int getWebserver1_prijs() {
-        return webserver1_prijs;
-    }
-
-    public static int getWebserver2_prijs() {
-        return webserver2_prijs;
-    }
-
-    public static int getWebserver3_prijs() {
-        return webserver3_prijs;
     }
 
 }
