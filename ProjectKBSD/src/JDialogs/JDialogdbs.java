@@ -29,10 +29,10 @@ public class JDialogdbs extends JDialog {
     private JProgressBar progressBar4;
     private JTabbedPane tabbedPane1;
     private String stringDb1, stringDb2;
-    private boolean isGevonden = false;
+    private boolean isGevonden = false, isGevonden1 = false;
 
     public JDialogdbs() {
-        setTitle("Monitoring databaseserver");
+        setTitle("Monitor dialog");
         setContentPane(contentPane);
         setModal(true);
 
@@ -69,10 +69,10 @@ public class JDialogdbs extends JDialog {
             stringDb2 = MonitorS.getTesttest123().get(i).getName();
             if (stringDb2.equals("db2")) {
                 JLabel7.setText("Beschikbaar");
-                isGevonden = true;
+                isGevonden1 = true;
             }
 
-            if (isGevonden == false) {
+            if (isGevonden1 == false) {
                 JLabel7.setText("Offline");
             }
         }
@@ -127,10 +127,10 @@ public class JDialogdbs extends JDialog {
                             stringDb2 = MonitorS.getTesttest123().get(i).getName();
                             if (stringDb2.equals("db2")) {
                                 JLabel7.setText("Beschikbaar");
-                                isGevonden = true;
+                                isGevonden1 = true;
                             }
 
-                            if (isGevonden == false) {
+                            if (isGevonden1 == false) {
                                 JLabel7.setText("Offline");
                             }
                         }
