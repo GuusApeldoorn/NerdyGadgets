@@ -1,7 +1,12 @@
 package JDialogs;
 
+import projectkbsdmonitor.connectjson;
+
 import javax.swing.*;
 import java.awt.*;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 public class JDialogdbl extends JDialog {
     private JPanel contentPane;
@@ -14,12 +19,86 @@ public class JDialogdbl extends JDialog {
     private JLabel JLabel3;
     private JLabel JLabel2;
     private JLabel JLabel1;
+    private String stringdbl;
+    private boolean isGevonden = false;
 
 
     public JDialogdbl() {
         setTitle("Monitoring loadbalancer");
         setContentPane(contentPane);
         setModal(true);
+
+        connectjson MonitorS = new connectjson();
+        String response = MonitorS.getConnection();
+        MonitorS.setTesttest123(MonitorS.parse(response));
+
+        System.out.println(MonitorS.getTesttest123());
+
+        //db1
+        for (int i = 0; i < MonitorS.getTesttest123().size(); i++) {
+            stringdbl = MonitorS.getTesttest123().get(i).getName();
+            if (stringdbl.equals("loadbalancer")) {
+                JLabel1.setText("Beschikbaar");
+                isGevonden = true;
+            }
+
+            if (isGevonden == false) {
+                JLabel1.setText("Offline");
+            }
+        }
+        JLabel2.setText(Float.toString(MonitorS.getTesttest123().get(4).getUptime()) + " Minuten");
+        JLabel3.setText(Double.toString(MonitorS.getTesttest123().get(4).getCpu()) + "%");
+        JLabel4.setText(Integer.toString(MonitorS.getTesttest123().get(4).getDiksfree() + MonitorS.getTesttest123().get(4).getDiskused()) + " GB");
+        JLabel5.setText(Integer.toString(MonitorS.getTesttest123().get(4).getDiksfree() + MonitorS.getTesttest123().get(4).getDiskused()) + " GB");
+        JLabel6.setText("Nog " + Integer.toString(MonitorS.getTesttest123().get(4).getDiksfree()) + " GB van de " + Integer.toString(MonitorS.getTesttest123().get(4).getDiksfree() + MonitorS.getTesttest123().get(4).getDiskused()) + " GB vrij");
+        progressBar1.setForeground(Color.BLUE);
+        progressBar1.setValue((int) MonitorS.getTesttest123().get(4).getCpu());
+        progressBar2.setForeground(Color.BLUE);
+        progressBar2.setValue(MonitorS.getTesttest123().get(4).getDiskused() * 11);
+
+
+
+        ScheduledExecutorService e = Executors.newSingleThreadScheduledExecutor();
+        e.scheduleAtFixedRate(new Runnable() {
+            @Override
+            public void run() {
+                // do stuff
+                connectjson MonitorS = new connectjson();
+                String response = MonitorS.getConnection();
+                MonitorS.setTesttest123(MonitorS.parse(response));
+
+                SwingUtilities.invokeLater(new Runnable() {
+                    // of course, you could improve this by moving dateformat variable elsewhere
+
+                    @Override
+                    public void run() {
+                        //db1
+                        for (int i = 0; i < MonitorS.getTesttest123().size(); i++) {
+                            stringdbl = MonitorS.getTesttest123().get(i).getName();
+                            if (stringdbl.equals("loadbalancer")) {
+                                JLabel1.setText("Beschikbaar");
+                                isGevonden = true;
+                            }
+
+                            if (isGevonden == false) {
+                                JLabel1.setText("Offline");
+                            }
+                        }
+                        JLabel2.setText(Float.toString(MonitorS.getTesttest123().get(4).getUptime()) + " Minuten");
+                        JLabel3.setText(Double.toString(MonitorS.getTesttest123().get(4).getCpu()) + "%");
+                        JLabel4.setText(Integer.toString(MonitorS.getTesttest123().get(4).getDiksfree() + MonitorS.getTesttest123().get(4).getDiskused()) + " GB");
+                        JLabel5.setText(Integer.toString(MonitorS.getTesttest123().get(4).getDiksfree() + MonitorS.getTesttest123().get(4).getDiskused()) + " GB");
+                        JLabel6.setText("Nog " + Integer.toString(MonitorS.getTesttest123().get(4).getDiksfree()) + " GB van de " + Integer.toString(MonitorS.getTesttest123().get(4).getDiksfree() + MonitorS.getTesttest123().get(4).getDiskused()) + " GB vrij");
+                        progressBar1.setForeground(Color.BLUE);
+                        progressBar1.setValue((int) MonitorS.getTesttest123().get(4).getCpu());
+                        progressBar2.setForeground(Color.BLUE);
+                        progressBar2.setValue(MonitorS.getTesttest123().get(4).getDiskused() * 11);
+
+
+                    }
+                });
+            }
+        }, 0, 1, TimeUnit.SECONDS);
 
     }
 
