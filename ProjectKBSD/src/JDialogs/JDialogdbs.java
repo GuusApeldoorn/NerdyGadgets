@@ -48,21 +48,26 @@ public class JDialogdbs extends JDialog {
             if (stringDb1.equals("db1")) {
                 JLabel1.setText("Beschikbaar");
                 isGevonden = true;
+                JLabel2.setText(Float.toString(MonitorS.getTesttest123().get(2).getUptime()) + " Minuten");
+                JLabel3.setText(Double.toString(MonitorS.getTesttest123().get(2).getCpu()) + "%");
+                JLabel4.setText(Integer.toString(MonitorS.getTesttest123().get(2).getDiksfree() + MonitorS.getTesttest123().get(2).getDiskused()) + " GB");
+                JLabel5.setText(Integer.toString(MonitorS.getTesttest123().get(2).getDiksfree() + MonitorS.getTesttest123().get(2).getDiskused()) + " GB");
+                JLabel6.setText("Nog " + Integer.toString(MonitorS.getTesttest123().get(2).getDiksfree()) + " GB van de " + Integer.toString(MonitorS.getTesttest123().get(2).getDiksfree() + MonitorS.getTesttest123().get(2).getDiskused()) + " GB vrij");
+                progressBar1.setForeground(Color.BLUE);
+                progressBar1.setValue((int) MonitorS.getTesttest123().get(2).getCpu());
+                progressBar2.setForeground(Color.BLUE);
+                progressBar2.setValue(MonitorS.getTesttest123().get(2).getDiskused() * 11);
             }
 
             if (isGevonden == false) {
                 JLabel1.setText("Offline");
+                JLabel2.setText("");
+                JLabel3.setText("");
+                JLabel4.setText("");
+                JLabel5.setText("");
+                JLabel6.setText("");
             }
         }
-        JLabel2.setText(Float.toString(MonitorS.getTesttest123().get(2).getUptime()) + " Minuten");
-        JLabel3.setText(Double.toString(MonitorS.getTesttest123().get(2).getCpu()) + "%");
-        JLabel4.setText(Integer.toString(MonitorS.getTesttest123().get(2).getDiksfree() + MonitorS.getTesttest123().get(2).getDiskused()) + " GB");
-        JLabel5.setText(Integer.toString(MonitorS.getTesttest123().get(2).getDiksfree() + MonitorS.getTesttest123().get(2).getDiskused()) + " GB");
-        JLabel6.setText("Nog " + Integer.toString(MonitorS.getTesttest123().get(2).getDiksfree()) + " GB van de " + Integer.toString(MonitorS.getTesttest123().get(2).getDiksfree() + MonitorS.getTesttest123().get(2).getDiskused()) + " GB vrij");
-        progressBar1.setForeground(Color.BLUE);
-        progressBar1.setValue((int) MonitorS.getTesttest123().get(2).getCpu());
-        progressBar2.setForeground(Color.BLUE);
-        progressBar2.setValue(MonitorS.getTesttest123().get(2).getDiskused() * 11);
 
         //db2
         for (int i = 0; i < MonitorS.getTesttest123().size(); i++) {
@@ -70,21 +75,26 @@ public class JDialogdbs extends JDialog {
             if (stringDb2.equals("db2")) {
                 JLabel7.setText("Beschikbaar");
                 isGevonden1 = true;
+                JLabel8.setText(Float.toString(MonitorS.getTesttest123().get(3).getUptime()) + " Minuten");
+                JLabel9.setText(Double.toString(MonitorS.getTesttest123().get(3).getCpu()) + "%");
+                JLabel10.setText(Integer.toString(MonitorS.getTesttest123().get(3).getDiksfree() + MonitorS.getTesttest123().get(1).getDiskused()) + " GB");
+                JLabel11.setText(Integer.toString(MonitorS.getTesttest123().get(3).getDiksfree() + MonitorS.getTesttest123().get(1).getDiskused()) + " GB");
+                JLabel12.setText("Nog " + Integer.toString(MonitorS.getTesttest123().get(3).getDiksfree()) + " GB van de " + Integer.toString(MonitorS.getTesttest123().get(3).getDiksfree() + MonitorS.getTesttest123().get(3).getDiskused()) + " GB vrij");
+                progressBar3.setForeground(Color.BLUE);
+                progressBar3.setValue((int) MonitorS.getTesttest123().get(3).getCpu());
+                progressBar4.setForeground(Color.BLUE);
+                progressBar4.setValue(MonitorS.getTesttest123().get(3).getDiskused() * 11);
             }
 
             if (isGevonden1 == false) {
                 JLabel7.setText("Offline");
+                JLabel8.setText("");
+                JLabel9.setText("");
+                JLabel10.setText("");
+                JLabel11.setText("");
+                JLabel12.setText("");
             }
         }
-        JLabel8.setText(Float.toString(MonitorS.getTesttest123().get(3).getUptime()) + " Minuten");
-        JLabel9.setText(Double.toString(MonitorS.getTesttest123().get(3).getCpu()) + "%");
-        JLabel10.setText(Integer.toString(MonitorS.getTesttest123().get(3).getDiksfree() + MonitorS.getTesttest123().get(1).getDiskused()) + " GB");
-        JLabel11.setText(Integer.toString(MonitorS.getTesttest123().get(3).getDiksfree() + MonitorS.getTesttest123().get(1).getDiskused()) + " GB");
-        JLabel12.setText("Nog " + Integer.toString(MonitorS.getTesttest123().get(3).getDiksfree()) + " GB van de " + Integer.toString(MonitorS.getTesttest123().get(3).getDiksfree() + MonitorS.getTesttest123().get(3).getDiskused()) + " GB vrij");
-        progressBar3.setForeground(Color.BLUE);
-        progressBar3.setValue((int) MonitorS.getTesttest123().get(3).getCpu());
-        progressBar4.setForeground(Color.BLUE);
-        progressBar4.setValue(MonitorS.getTesttest123().get(3).getDiskused() * 11);
 
         ScheduledExecutorService e = Executors.newSingleThreadScheduledExecutor();
         e.scheduleAtFixedRate(new Runnable() {
@@ -106,21 +116,26 @@ public class JDialogdbs extends JDialog {
                             if (stringDb1.equals("db1")) {
                                 JLabel1.setText("Beschikbaar");
                                 isGevonden = true;
+                                JLabel2.setText(Float.toString(MonitorS.getTesttest123().get(2).getUptime()) + " Minuten");
+                                JLabel3.setText(Double.toString(MonitorS.getTesttest123().get(2).getCpu()) + "%");
+                                JLabel4.setText(Integer.toString(MonitorS.getTesttest123().get(2).getDiksfree() + MonitorS.getTesttest123().get(2).getDiskused()) + " GB");
+                                JLabel5.setText(Integer.toString(MonitorS.getTesttest123().get(2).getDiksfree() + MonitorS.getTesttest123().get(2).getDiskused()) + " GB");
+                                JLabel6.setText("Nog " + Integer.toString(MonitorS.getTesttest123().get(2).getDiksfree()) + " GB van de " + Integer.toString(MonitorS.getTesttest123().get(2).getDiksfree() + MonitorS.getTesttest123().get(2).getDiskused()) + " GB vrij");
+                                progressBar1.setForeground(Color.BLUE);
+                                progressBar1.setValue((int) MonitorS.getTesttest123().get(2).getCpu());
+                                progressBar2.setForeground(Color.BLUE);
+                                progressBar2.setValue(MonitorS.getTesttest123().get(2).getDiskused() * 11);
                             }
 
                             if (isGevonden == false) {
                                 JLabel1.setText("Offline");
+                                JLabel2.setText("");
+                                JLabel3.setText("");
+                                JLabel4.setText("");
+                                JLabel5.setText("");
+                                JLabel6.setText("");
                             }
                         }
-                        JLabel2.setText(Float.toString(MonitorS.getTesttest123().get(2).getUptime()) + " Minuten");
-                        JLabel3.setText(Double.toString(MonitorS.getTesttest123().get(2).getCpu()) + "%");
-                        JLabel4.setText(Integer.toString(MonitorS.getTesttest123().get(2).getDiksfree() + MonitorS.getTesttest123().get(2).getDiskused()) + " GB");
-                        JLabel5.setText(Integer.toString(MonitorS.getTesttest123().get(2).getDiksfree() + MonitorS.getTesttest123().get(2).getDiskused()) + " GB");
-                        JLabel6.setText("Nog " + Integer.toString(MonitorS.getTesttest123().get(2).getDiksfree()) + " GB van de " + Integer.toString(MonitorS.getTesttest123().get(2).getDiksfree() + MonitorS.getTesttest123().get(2).getDiskused()) + " GB vrij");
-                        progressBar1.setForeground(Color.BLUE);
-                        progressBar1.setValue((int) MonitorS.getTesttest123().get(2).getCpu());
-                        progressBar2.setForeground(Color.BLUE);
-                        progressBar2.setValue(MonitorS.getTesttest123().get(2).getDiskused() * 11);
 
                         //db2
                         for (int i = 0; i < MonitorS.getTesttest123().size(); i++) {
@@ -128,21 +143,26 @@ public class JDialogdbs extends JDialog {
                             if (stringDb2.equals("db2")) {
                                 JLabel7.setText("Beschikbaar");
                                 isGevonden1 = true;
+                                JLabel8.setText(Float.toString(MonitorS.getTesttest123().get(3).getUptime()) + " Minuten");
+                                JLabel9.setText(Double.toString(MonitorS.getTesttest123().get(3).getCpu()) + "%");
+                                JLabel10.setText(Integer.toString(MonitorS.getTesttest123().get(3).getDiksfree() + MonitorS.getTesttest123().get(3).getDiskused()) + " GB");
+                                JLabel11.setText(Integer.toString(MonitorS.getTesttest123().get(3).getDiksfree() + MonitorS.getTesttest123().get(3).getDiskused()) + " GB");
+                                JLabel12.setText("Nog " + Integer.toString(MonitorS.getTesttest123().get(3).getDiksfree()) + " GB van de " + Integer.toString(MonitorS.getTesttest123().get(3).getDiksfree() + MonitorS.getTesttest123().get(3).getDiskused()) + " GB vrij");
+                                progressBar3.setForeground(Color.BLUE);
+                                progressBar3.setValue((int) MonitorS.getTesttest123().get(3).getCpu());
+                                progressBar4.setForeground(Color.BLUE);
+                                progressBar4.setValue(MonitorS.getTesttest123().get(3).getDiskused() * 11);
                             }
 
                             if (isGevonden1 == false) {
                                 JLabel7.setText("Offline");
+                                JLabel8.setText("");
+                                JLabel9.setText("");
+                                JLabel10.setText("");
+                                JLabel11.setText("");
+                                JLabel12.setText("");
                             }
                         }
-                        JLabel8.setText(Float.toString(MonitorS.getTesttest123().get(3).getUptime()) + " Minuten");
-                        JLabel9.setText(Double.toString(MonitorS.getTesttest123().get(3).getCpu()) + "%");
-                        JLabel10.setText(Integer.toString(MonitorS.getTesttest123().get(3).getDiksfree() + MonitorS.getTesttest123().get(3).getDiskused()) + " GB");
-                        JLabel11.setText(Integer.toString(MonitorS.getTesttest123().get(3).getDiksfree() + MonitorS.getTesttest123().get(3).getDiskused()) + " GB");
-                        JLabel12.setText("Nog " + Integer.toString(MonitorS.getTesttest123().get(3).getDiksfree()) + " GB van de " + Integer.toString(MonitorS.getTesttest123().get(3).getDiksfree() + MonitorS.getTesttest123().get(3).getDiskused()) + " GB vrij");
-                        progressBar3.setForeground(Color.BLUE);
-                        progressBar3.setValue((int) MonitorS.getTesttest123().get(3).getCpu());
-                        progressBar4.setForeground(Color.BLUE);
-                        progressBar4.setValue(MonitorS.getTesttest123().get(3).getDiskused() * 11);
                     }
                 });
             }
