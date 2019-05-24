@@ -9,6 +9,7 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 public class JDialogdbl extends JDialog {
+
     private JPanel contentPane;
     private JTabbedPane tabbedPane1;
     private JProgressBar progressBar1;
@@ -21,7 +22,6 @@ public class JDialogdbl extends JDialog {
     private JLabel JLabel1;
     private String stringdbl;
     private boolean isGevonden = false;
-
 
     public JDialogdbl() {
         setTitle("Monitoring loadbalancer");
@@ -40,23 +40,26 @@ public class JDialogdbl extends JDialog {
             if (stringdbl.equals("loadbalancer")) {
                 JLabel1.setText("Beschikbaar");
                 isGevonden = true;
+                JLabel2.setText(Float.toString(MonitorS.getTesttest123().get(4).getUptime()) + " Minuten");
+                JLabel3.setText(Double.toString(MonitorS.getTesttest123().get(4).getCpu()) + "%");
+                JLabel4.setText(Integer.toString(MonitorS.getTesttest123().get(4).getDiksfree() + MonitorS.getTesttest123().get(4).getDiskused()) + " GB");
+                JLabel5.setText(Integer.toString(MonitorS.getTesttest123().get(4).getDiksfree() + MonitorS.getTesttest123().get(4).getDiskused()) + " GB");
+                JLabel6.setText("Nog " + Integer.toString(MonitorS.getTesttest123().get(4).getDiksfree()) + " GB van de " + Integer.toString(MonitorS.getTesttest123().get(4).getDiksfree() + MonitorS.getTesttest123().get(4).getDiskused()) + " GB vrij");
+                progressBar1.setForeground(Color.BLUE);
+                progressBar1.setValue((int) MonitorS.getTesttest123().get(4).getCpu());
+                progressBar2.setForeground(Color.BLUE);
+                progressBar2.setValue(MonitorS.getTesttest123().get(4).getDiskused() * 11);
             }
 
             if (isGevonden == false) {
                 JLabel1.setText("Offline");
+                JLabel2.setText("");
+                JLabel3.setText("");
+                JLabel4.setText("");
+                JLabel5.setText("");
+                JLabel6.setText("");
             }
         }
-        JLabel2.setText(Float.toString(MonitorS.getTesttest123().get(4).getUptime()) + " Minuten");
-        JLabel3.setText(Double.toString(MonitorS.getTesttest123().get(4).getCpu()) + "%");
-        JLabel4.setText(Integer.toString(MonitorS.getTesttest123().get(4).getDiksfree() + MonitorS.getTesttest123().get(4).getDiskused()) + " GB");
-        JLabel5.setText(Integer.toString(MonitorS.getTesttest123().get(4).getDiksfree() + MonitorS.getTesttest123().get(4).getDiskused()) + " GB");
-        JLabel6.setText("Nog " + Integer.toString(MonitorS.getTesttest123().get(4).getDiksfree()) + " GB van de " + Integer.toString(MonitorS.getTesttest123().get(4).getDiksfree() + MonitorS.getTesttest123().get(4).getDiskused()) + " GB vrij");
-        progressBar1.setForeground(Color.BLUE);
-        progressBar1.setValue((int) MonitorS.getTesttest123().get(4).getCpu());
-        progressBar2.setForeground(Color.BLUE);
-        progressBar2.setValue(MonitorS.getTesttest123().get(4).getDiskused() * 11);
-
-
 
         ScheduledExecutorService e = Executors.newSingleThreadScheduledExecutor();
         e.scheduleAtFixedRate(new Runnable() {
@@ -78,22 +81,26 @@ public class JDialogdbl extends JDialog {
                             if (stringdbl.equals("loadbalancer")) {
                                 JLabel1.setText("Beschikbaar");
                                 isGevonden = true;
+                                JLabel2.setText(Float.toString(MonitorS.getTesttest123().get(4).getUptime()) + " Minuten");
+                                JLabel3.setText(Double.toString(MonitorS.getTesttest123().get(4).getCpu()) + "%");
+                                JLabel4.setText(Integer.toString(MonitorS.getTesttest123().get(4).getDiksfree() + MonitorS.getTesttest123().get(4).getDiskused()) + " GB");
+                                JLabel5.setText(Integer.toString(MonitorS.getTesttest123().get(4).getDiksfree() + MonitorS.getTesttest123().get(4).getDiskused()) + " GB");
+                                JLabel6.setText("Nog " + Integer.toString(MonitorS.getTesttest123().get(4).getDiksfree()) + " GB van de " + Integer.toString(MonitorS.getTesttest123().get(4).getDiksfree() + MonitorS.getTesttest123().get(4).getDiskused()) + " GB vrij");
+                                progressBar1.setForeground(Color.BLUE);
+                                progressBar1.setValue((int) MonitorS.getTesttest123().get(4).getCpu());
+                                progressBar2.setForeground(Color.BLUE);
+                                progressBar2.setValue(MonitorS.getTesttest123().get(4).getDiskused() * 11);
                             }
 
                             if (isGevonden == false) {
                                 JLabel1.setText("Offline");
+                                JLabel2.setText("");
+                                JLabel3.setText("");
+                                JLabel4.setText("");
+                                JLabel5.setText("");
+                                JLabel6.setText("");
                             }
                         }
-                        JLabel2.setText(Float.toString(MonitorS.getTesttest123().get(4).getUptime()) + " Minuten");
-                        JLabel3.setText(Double.toString(MonitorS.getTesttest123().get(4).getCpu()) + "%");
-                        JLabel4.setText(Integer.toString(MonitorS.getTesttest123().get(4).getDiksfree() + MonitorS.getTesttest123().get(4).getDiskused()) + " GB");
-                        JLabel5.setText(Integer.toString(MonitorS.getTesttest123().get(4).getDiksfree() + MonitorS.getTesttest123().get(4).getDiskused()) + " GB");
-                        JLabel6.setText("Nog " + Integer.toString(MonitorS.getTesttest123().get(4).getDiksfree()) + " GB van de " + Integer.toString(MonitorS.getTesttest123().get(4).getDiksfree() + MonitorS.getTesttest123().get(4).getDiskused()) + " GB vrij");
-                        progressBar1.setForeground(Color.BLUE);
-                        progressBar1.setValue((int) MonitorS.getTesttest123().get(4).getCpu());
-                        progressBar2.setForeground(Color.BLUE);
-                        progressBar2.setValue(MonitorS.getTesttest123().get(4).getDiskused() * 11);
-
 
                     }
                 });
@@ -101,7 +108,6 @@ public class JDialogdbl extends JDialog {
         }, 0, 1, TimeUnit.SECONDS);
 
     }
-
 
     {
 // GUI initializer generated by IntelliJ IDEA GUI Designer
@@ -111,9 +117,8 @@ public class JDialogdbl extends JDialog {
     }
 
     /**
-     * Method generated by IntelliJ IDEA GUI Designer
-     * >>> IMPORTANT!! <<<
-     * DO NOT edit this method OR call it in your code!
+     * Method generated by IntelliJ IDEA GUI Designer >>> IMPORTANT!! <<< DO NOT
+     * edit this method OR call it in your code!
      *
      * @noinspection ALL
      */
@@ -162,6 +167,7 @@ public class JDialogdbl extends JDialog {
         JLabel1 = new JLabel();
         JLabel1.setText("Beschikbaar");
         panel2.add(JLabel1, new com.intellij.uiDesigner.core.GridConstraints(0, 1, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        setResizable(false);
     }
 
     /**
