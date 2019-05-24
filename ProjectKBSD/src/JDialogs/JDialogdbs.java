@@ -9,6 +9,7 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 public class JDialogdbs extends JDialog {
+
     private JPanel contentPane;
     private JProgressBar progressBar1;
     private JProgressBar progressBar2;
@@ -27,7 +28,8 @@ public class JDialogdbs extends JDialog {
     private JProgressBar progressBar3;
     private JProgressBar progressBar4;
     private JTabbedPane tabbedPane1;
-
+    private String stringDb1, stringDb2;
+    private boolean isGevonden = false;
 
     public JDialogdbs() {
         setTitle("Monitor dialog");
@@ -40,11 +42,17 @@ public class JDialogdbs extends JDialog {
 
         System.out.println(MonitorS.getTesttest123());
 
-        //webserver1
-        if (MonitorS.getTesttest123().get(0).getUptime() > 0) {
-            JLabel1.setText("Beschikbaar");
-        } else {
-            JLabel1.setText("Offline");
+        //db1
+        for (int i = 0; i < MonitorS.getTesttest123().size(); i++) {
+            stringDb1 = MonitorS.getTesttest123().get(i).getName();
+            if (stringDb1.equals("db1")) {
+                JLabel1.setText("Beschikbaar");
+                isGevonden = true;
+            }
+
+            if (isGevonden == false) {
+                JLabel1.setText("Offline");
+            }
         }
         JLabel2.setText(Float.toString(MonitorS.getTesttest123().get(2).getUptime()) + " Minuten");
         JLabel3.setText(Double.toString(MonitorS.getTesttest123().get(2).getCpu()) + "%");
@@ -56,11 +64,17 @@ public class JDialogdbs extends JDialog {
         progressBar2.setForeground(Color.BLUE);
         progressBar2.setValue(MonitorS.getTesttest123().get(2).getDiskused() * 11);
 
-        //webserver2
-        if (MonitorS.getTesttest123().get(3).getUptime() > 0) {
-            JLabel7.setText("Beschikbaar");
-        } else {
-            JLabel7.setText("Offline");
+        //db2
+        for (int i = 0; i < MonitorS.getTesttest123().size(); i++) {
+            stringDb2 = MonitorS.getTesttest123().get(i).getName();
+            if (stringDb2.equals("db2")) {
+                JLabel7.setText("Beschikbaar");
+                isGevonden = true;
+            }
+
+            if (isGevonden == false) {
+                JLabel7.setText("Offline");
+            }
         }
         JLabel8.setText(Float.toString(MonitorS.getTesttest123().get(3).getUptime()) + " Minuten");
         JLabel9.setText(Double.toString(MonitorS.getTesttest123().get(3).getCpu()) + "%");
@@ -86,11 +100,17 @@ public class JDialogdbs extends JDialog {
 
                     @Override
                     public void run() {
-                        //webserver1
-                        if (MonitorS.getTesttest123().get(2).getUptime() > 0) {
-                            JLabel1.setText("Beschikbaar");
-                        } else {
-                            JLabel1.setText("Offline");
+                        //db1
+                        for (int i = 0; i < MonitorS.getTesttest123().size(); i++) {
+                            stringDb1 = MonitorS.getTesttest123().get(i).getName();
+                            if (stringDb1.equals("db1")) {
+                                JLabel1.setText("Beschikbaar");
+                                isGevonden = true;
+                            }
+
+                            if (isGevonden == false) {
+                                JLabel1.setText("Offline");
+                            }
                         }
                         JLabel2.setText(Float.toString(MonitorS.getTesttest123().get(2).getUptime()) + " Minuten");
                         JLabel3.setText(Double.toString(MonitorS.getTesttest123().get(2).getCpu()) + "%");
@@ -102,11 +122,17 @@ public class JDialogdbs extends JDialog {
                         progressBar2.setForeground(Color.BLUE);
                         progressBar2.setValue(MonitorS.getTesttest123().get(2).getDiskused() * 11);
 
-                        //webserver2
-                        if (MonitorS.getTesttest123().get(3).getUptime() > 0) {
-                            JLabel7.setText("Beschikbaar");
-                        } else {
-                            JLabel7.setText("Offline");
+                        //db2
+                        for (int i = 0; i < MonitorS.getTesttest123().size(); i++) {
+                            stringDb2 = MonitorS.getTesttest123().get(i).getName();
+                            if (stringDb2.equals("db2")) {
+                                JLabel7.setText("Beschikbaar");
+                                isGevonden = true;
+                            }
+
+                            if (isGevonden == false) {
+                                JLabel7.setText("Offline");
+                            }
                         }
                         JLabel8.setText(Float.toString(MonitorS.getTesttest123().get(3).getUptime()) + " Minuten");
                         JLabel9.setText(Double.toString(MonitorS.getTesttest123().get(3).getCpu()) + "%");
@@ -131,9 +157,8 @@ public class JDialogdbs extends JDialog {
     }
 
     /**
-     * Method generated by IntelliJ IDEA GUI Designer
-     * >>> IMPORTANT!! <<<
-     * DO NOT edit this method OR call it in your code!
+     * Method generated by IntelliJ IDEA GUI Designer >>> IMPORTANT!! <<< DO NOT
+     * edit this method OR call it in your code!
      *
      * @noinspection ALL
      */
