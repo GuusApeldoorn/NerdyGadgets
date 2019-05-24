@@ -38,7 +38,7 @@ public class JDialogws extends JDialog {
 //    private ArrayList<Node> test123;
 
     public JDialogws() {
-        setTitle("Monitor suite");
+        setTitle("Monitoring webserver");
         setContentPane(contentPane);
         setModal(true);
 
