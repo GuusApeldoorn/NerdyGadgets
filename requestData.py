@@ -48,7 +48,7 @@ while True:
 
     for url in servers:
         try:
-            r = requests.get(url)
+            r = requests.get(url, timeout=0.2)
 
             # If the response was successful, no Exception will be raised
             r.raise_for_status()
