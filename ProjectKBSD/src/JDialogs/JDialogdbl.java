@@ -17,7 +17,7 @@ public class JDialogdbl extends JDialog {
 
 
     public JDialogdbl() {
-        setTitle("Monitor dialog");
+        setTitle("Monitor suite");
         setContentPane(contentPane);
         setModal(true);
 
