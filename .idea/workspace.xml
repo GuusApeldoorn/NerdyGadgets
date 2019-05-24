@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="651e37d9-eca3-4fd2-ad42-680ac06fd83a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogdbl.form" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogdbl.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogdbl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogdbl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogdbs.form" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogdbs.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogdbs.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogdbs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogfw.form" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogfw.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogfw.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogfw.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogws.form" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogws.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogws.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogws.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,8 +43,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogws.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-555">
-              <caret line="59" selection-start-line="59" selection-end-line="59" />
+            <state relative-caret-position="339">
+              <caret line="40" column="31" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="initializer##0;class#JDialogws#0" />
@@ -60,69 +54,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogdbs.form">
-          <provider selected="true" editor-type-id="ui-designer" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogdbl.form">
           <provider selected="true" editor-type-id="ui-designer" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogfw.form">
-          <provider selected="true" editor-type-id="ui-designer" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogdbs.java">
+        <entry file="file://$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogdbl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ProjectKBSD/src/projectkbsdmonitor/connectjson.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2914">
-              <caret line="242" lean-forward="true" selection-start-line="242" selection-end-line="242" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#443#444#0" expanded="true" />
-                <element signature="e#492#493#0" expanded="true" />
-                <element signature="e#614#615#0" expanded="true" />
-                <element signature="e#648#649#0" expanded="true" />
-                <element signature="e#711#712#0" expanded="true" />
-                <element signature="e#757#758#0" expanded="true" />
-                <element signature="e#1908#1914#0" expanded="true" />
-                <element signature="e#6249#6608#0" expanded="true" />
-                <element signature="e#6607#6608#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ProjectKBSD/src/projectkbsdmonitor/Node.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-              <folding>
-                <element signature="e#861#862#0" expanded="true" />
-                <element signature="e#890#891#0" expanded="true" />
-                <element signature="e#921#922#0" expanded="true" />
-                <element signature="e#948#949#0" expanded="true" />
-                <element signature="e#981#982#0" expanded="true" />
-                <element signature="e#1013#1014#0" expanded="true" />
-                <element signature="e#1045#1046#0" expanded="true" />
-                <element signature="e#1076#1077#0" expanded="true" />
-                <element signature="e#1108#1109#0" expanded="true" />
-                <element signature="e#1139#1140#0" expanded="true" />
-                <element signature="e#1169#1170#0" expanded="true" />
-                <element signature="e#1195#1196#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="315">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
         </entry>
@@ -130,11 +70,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ProjectKBSD/src/projectkbsdmonitor/Monitoring.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="202" column="39" selection-start-line="202" selection-start-column="39" selection-end-line="202" selection-end-column="39" />
+            <state relative-caret-position="2668">
+              <caret line="230" selection-start-line="230" selection-end-line="230" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogfw.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -149,18 +98,19 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/ProjectKBSD/src/projectkbsd/Algorithm.java" />
-        <option value="$PROJECT_DIR$/ProjectKBSD/src/projectkbsdmonitor/Monitoring.java" />
-        <option value="$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogws.form" />
-        <option value="$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogws.java" />
         <option value="$PROJECT_DIR$/ProjectKBSD/src/projectkbsdmonitor/connectjson.java" />
-        <option value="$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogdbs.java" />
-        <option value="$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogdbl.form" />
+        <option value="$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogws.form" />
         <option value="$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogdbs.form" />
+        <option value="$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogdbs.java" />
         <option value="$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogfw.form" />
+        <option value="$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogdbl.form" />
+        <option value="$PROJECT_DIR$/ProjectKBSD/src/projectkbsdmonitor/Monitoring.java" />
+        <option value="$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogws.java" />
+        <option value="$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogdbl.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
@@ -169,7 +119,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -201,7 +150,15 @@
               <item name="ProjectKBSD" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="JDialogs" type="462c0819:PsiDirectoryNode" />
-              <item name="JDialogfw" type="e9f4de52:FormNode" />
+              <item name="JDialogdbl" type="e9f4de52:FormNode" />
+            </path>
+            <path>
+              <item name="NerdyGadgets" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NerdyGadgets" type="462c0819:PsiDirectoryNode" />
+              <item name="ProjectKBSD" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="JDialogs" type="462c0819:PsiDirectoryNode" />
+              <item name="JDialogws" type="e9f4de52:FormNode" />
             </path>
             <path>
               <item name="NerdyGadgets" type="b2602c69:ProjectViewProjectNode" />
@@ -225,11 +182,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW" value="false" />
+    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="167" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -299,7 +259,8 @@
       <option name="presentableId" value="Default" />
       <updated>1557820713538</updated>
       <workItem from="1558619276293" duration="67000" />
-      <workItem from="1558636343001" duration="4586000" />
+      <workItem from="1558636343001" duration="8796000" />
+      <workItem from="1558689397215" duration="1591000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/GuusApeldoorn/NerdyGadgets&#10;&#10;# Conflicts:&#10;#&#9;ProjectKBSD/src/projectkbsd/Algorithm.java">
       <created>1558616333822</created>
@@ -315,27 +276,40 @@
       <option name="project" value="LOCAL" />
       <updated>1558619323701</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Alle je JLabels en Jprogressbars bij als server dialogs gezet!">
+      <created>1558641844521</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1558641844521</updated>
+    </task>
+    <task id="LOCAL-00004" summary="in de dialog van de database server de gegevens toegevoegd.">
+      <created>1558645639409</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1558645639409</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8583000" />
+    <option name="totallyTimeSpent" value="14384000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3783977" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28540772" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.32891566" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" visible="true" weight="0.32891566" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49928468" visible="true" weight="0.32891566" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -345,6 +319,7 @@
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32891566" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -362,7 +337,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Merge branch 'master' of https://github.com/GuusApeldoorn/NerdyGadgets&#10;&#10;# Conflicts:&#10;#&#9;ProjectKBSD/src/projectkbsd/Algorithm.java" />
     <MESSAGE value="Volledige update &#10;voor gerrit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Volledige update &#10;voor gerrit" />
+    <MESSAGE value="Alle je JLabels en Jprogressbars bij als server dialogs gezet!" />
+    <MESSAGE value="in de dialog van de database server de gegevens toegevoegd." />
+    <option name="LAST_COMMIT_MESSAGE" value="in de dialog van de database server de gegevens toegevoegd." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ProjectKBSD/src/projectkbsd/Databaseloadbalancer.java">
@@ -486,23 +463,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectKBSD/src/projectkbsdmonitor/ProjectKBSDMonitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectKBSD/src/projectkbsdmonitor/Monitoring.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="202" column="39" selection-start-line="202" selection-start-column="39" selection-end-line="202" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_212.jdk/Contents/Home/src.zip!/javax/swing/plaf/basic/BasicButtonListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-540">
@@ -550,20 +510,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogdbs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="72" column="61" selection-start-line="72" selection-start-column="61" selection-end-line="72" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogdbs.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogfw.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogfw.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogws.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogdbs.java">
+    <entry file="file://$PROJECT_DIR$/ProjectKBSD/src/projectkbsdmonitor/ProjectKBSDMonitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="210">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogdbl.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProjectKBSD/src/projectkbsdmonitor/Monitoring.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2668">
+          <caret line="230" selection-start-line="230" selection-end-line="230" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogws.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-555">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
+        <state relative-caret-position="339">
+          <caret line="40" column="31" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="initializer##0;class#JDialogws#0" />
@@ -571,14 +564,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogdbs.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogdbl.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogfw.form">
-      <provider selected="true" editor-type-id="ui-designer" />
+    <entry file="file://$PROJECT_DIR$/ProjectKBSD/src/JDialogs/JDialogdbl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">

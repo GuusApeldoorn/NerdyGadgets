@@ -17,7 +17,7 @@ public class JDialogdbl extends JDialog {
 
 
     public JDialogdbl() {
-        setTitle("Monitor dialog");
+        setTitle("Monitoring loadbalancer");
         setContentPane(contentPane);
         setModal(true);
 

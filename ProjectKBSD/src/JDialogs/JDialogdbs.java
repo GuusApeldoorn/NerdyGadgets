@@ -32,7 +32,7 @@ public class JDialogdbs extends JDialog {
     private boolean isGevonden = false;
 
     public JDialogdbs() {
-        setTitle("Monitor dialog");
+        setTitle("Monitoring databaseserver");
         setContentPane(contentPane);
         setModal(true);
 
